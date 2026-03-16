@@ -14,11 +14,13 @@
                 }
             }
 
+            // sql syntax
             var AnswerEnum = from n in Answer
                      where n %2 == 0
                      select n;
             Answer= AnswerEnum.ToList();
 
+            
 
 
         }

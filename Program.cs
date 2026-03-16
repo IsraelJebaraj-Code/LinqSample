@@ -5,22 +5,17 @@
         static void Main(string[] args)
         {
             List<int> list = new List<int>() { 1,2,3,4,5};
-            IList<int> Answer = new List<int>();
-            foreach (int i in list)
-            {
-                if(i %2 == 0)
-                {
-                    Answer.Add(i);
-                }
-            }
+           
 
             // sql syntax
-            var AnswerEnum = from n in Answer
+            var Answer = from n in list
                      where n %2 == 0
                      select n;
-            Answer= AnswerEnum.ToList();
-
             
+
+            // method syntax
+            var Answer2 = list.Where(n=> n %2 == 0); 
+
 
 
         }
